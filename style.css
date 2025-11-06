@@ -1,14 +1,7 @@
-/* ============================================
-   Samitha Bandara - Portfolio CSS
-   Video Editor Personal Portfolio
-   ============================================ */
-
-/* 1. Google Fonts Import */
+/* adding google font */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap');
 
-/* ============================================
-   RESET & BASE STYLES
-   ============================================ */
+/* Universal Reset */
 * {
     margin: 0;
     padding: 0;
@@ -16,11 +9,11 @@
 }
 
 body {
-    /* Using Google Fonts */
     font-family: 'Poppins', sans-serif;
     background-color: #0a0d1f;
     color: #ffffff;
     line-height: 1.6;
+    /*Hides horizontal scrollbar*/
     overflow-x: hidden;
 }
 
@@ -30,16 +23,12 @@ body {
     padding: 0 2rem;
 }
 
-/* 2. Colors - Semi-transparent used throughout */
-/* Main: #FFD700 (Yellow), #0a0d1f (Dark Blue) */
+/* create animation steps */
 
-/* ============================================
-   19. ANIMATIONS - Keyframes
-   ============================================ */
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        /* 17. Transform */
+        opacity: 0; 
+        /* Transform */
         transform: translateY(30px);
     }
     to {
@@ -72,18 +61,17 @@ body {
     }
 }
 
-/* ============================================
-   HEADER & NAVIGATION
-   ============================================ */
+/* HEADER & NAVIGATION  */
+
 .main-header {
     background: rgba(10, 13, 31, 0.95);
     padding: 1.5rem 0;
-    /* 14. Border */
+    /* Border */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    /* 3. Shadows */
+    /* Shadows */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -94,13 +82,13 @@ body {
 }
 
 .logo h1 {
-    /* 1. Google Fonts - Bebas Neue */
+    /* Google Fonts - Bebas Neue */
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2rem;
-    /* 4. Text effects - letter spacing */
+    /* Text effects - letter spacing */
     letter-spacing: 3px;
     color: #FFD700;
-    /* 3. Text shadow */
+    /* Text shadow */
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
 }
 
@@ -115,14 +103,14 @@ body {
     color: #ffffff;
     font-weight: 600;
     font-size: 0.9rem;
-    /* 4. Text effects */
+    /* Text effects */
     letter-spacing: 1px;
-    /* 18. Transition */
+    /* Transition */
     transition: all 0.3s ease;
     position: relative;
 }
 
-/* 6. Pseudo-element with generated content */
+/* Pseudo-element with generated content */
 .main-nav a::after {
     content: '';
     position: absolute;
@@ -131,11 +119,10 @@ body {
     width: 0;
     height: 2px;
     background: #FFD700;
-    /* 18. Transition */
     transition: width 0.3s ease;
 }
 
-/* 7. User action pseudo-class :hover */
+/* User action pseudo-class :hover */
 .main-nav a:hover::after,
 .main-nav a.active::after {
     width: 100%;
@@ -151,33 +138,26 @@ body {
     background: #FFD700;
     color: #0a0d1f;
     padding: 0.8rem 2rem;
-    /* 15. Rounded corners */
     border-radius: 25px;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.9rem;
-    /* 18. Transition */
     transition: all 0.3s ease;
-    /* 3. Box shadow */
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
-/* 7. User action pseudo-class :hover */
+/* User action pseudo-class :hover */
 .cta-btn:hover {
-    /* 17. Transform */
     transform: translateY(-3px);
     box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5);
 }
 
-/* ============================================
-   HERO SECTION (HOME PAGE)
-   ============================================ */
+/* HERO SECTION (HOME PAGE) */
 .hero {
     padding: 6rem 0;
     min-height: 90vh;
     display: flex;
     align-items: center;
-    /* 19. Animation */
     animation: fadeIn 1s ease-in;
 }
 
@@ -192,18 +172,15 @@ body {
     color: #FFD700;
     font-size: 0.9rem;
     font-weight: 600;
-    /* 4. Text effects */
     letter-spacing: 2px;
     margin-bottom: 1rem;
 }
 
 .hero-title {
-    /* 1. Google Fonts - Bebas Neue */
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    /* 3. Text shadow */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -226,11 +203,9 @@ body {
 
 .btn {
     padding: 1rem 2.5rem;
-    /* 15. Rounded corners */
     border-radius: 30px;
     text-decoration: none;
     font-weight: 700;
-    /* 18. Transition */
     transition: all 0.3s ease;
     display: inline-block;
     border: none;
@@ -238,15 +213,13 @@ body {
 }
 
 .btn-primary {
-    /* 16. Gradient */
+    /* Gradient */
     background: linear-gradient(135deg, #FFD700, #FFA500);
-    color: #0a0d1f;
-    /* 3. Box shadow */
+    color: #0a0d1f;   
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
 }
 
 .btn-primary:hover {
-    /* 17. Transform */
     transform: translateY(-3px);
     box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
 }
@@ -258,12 +231,12 @@ body {
 }
 
 .btn-secondary:hover {
-    /* 2. Semi-transparent background */
+    /* Semi-transparent background */
     background: rgba(255, 215, 0, 0.1);
     transform: translateY(-3px);
 }
 
-/* 7. User action pseudo-class :active */
+/* User action pseudo-class :active */
 .btn:active {
     transform: translateY(0) scale(0.98);
 }
@@ -276,7 +249,6 @@ body {
 .social-icon {
     width: 45px;
     height: 45px;
-    /* 15. Rounded corners - circle */
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
@@ -285,21 +257,18 @@ body {
     justify-content: center;
     text-decoration: none;
     font-weight: 700;
-    /* 18. Transition */
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
 
-/* 5. Attribute selector [target="_blank"] */
+/* Attribute selector [target="_blank"] */
 .social-icon:hover {
     background: #FFD700;
     color: #0a0d1f;
     border-color: #FFD700;
-    /* 17. Transform */
     transform: translateY(-3px);
 }
 
-/* Hero Image */
 .hero-image {
     position: relative;
     filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 3));
@@ -307,19 +276,15 @@ body {
 
 .image-container {
     position: relative;
-    /* 19. Animation */
     animation: slideIn 1s ease-out;
 }
 
-/* 5. Attribute selector [alt] */
 .image-container img[alt] {
     width: 450px;
     height: 450px;
     object-fit: cover;
     object-position: center;
-    /* 15. Rounded corners - circle */
     border-radius: 50%;
-    /* 3. Box shadow - yellow glow */
     box-shadow: 0 0 60px rgba(255, 215, 0, 0.8),
                 0 20px 60px rgba(0, 0, 0, 0.5);
     position: relative;
@@ -332,53 +297,19 @@ body {
     position: absolute;
     width: 450px;
     height: 450px;
-    /* 15. Rounded corners - circle */
     border-radius: 50%;
     background: #FFD700;
     top: 49.2%;
     left: 42%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    /* 2. Semi-transparent */
     opacity: 0.3;
 }
 
 
-/* ============================================
-   BRANDS SECTION
-   ============================================ */
-.brands {
-    padding: 3rem 0;
-    background: rgba(255, 255, 255, 0.05);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+/* ABOUT SECTION */
 
-.brand-logos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
 
-.brand-item {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1.2rem;
-    font-weight: 700;
-    /* 18. Transition */
-    transition: all 0.3s ease;
-}
-
-.brand-item:hover {
-    color: #FFD700;
-    /* 17. Transform */
-    transform: scale(1.1);
-}
-
-/* ============================================
-   ABOUT SECTION
-   ============================================ */
 .about-section {
     padding: 6rem 0;
 }
@@ -399,8 +330,8 @@ body {
 .about-image .image-wrapper {
     position: relative;
     width: 100%;
-    max-width: 400px; /* matches .about-grid column */
-    height: 400px;    /* keep wrapper square so circle aligns */
+    max-width: 400px;
+    height: 400px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -419,19 +350,16 @@ body {
 
 .decorative-ring {
     position: absolute;
-    /* make the ring oval by using a non-square ratio */
     width: 140%;
     height: 100%;
     top: -20%;
     left: -20%;
     border: 3px solid rgba(255, 215, 0, 0.3);
-    /* 15. Rounded corners - ellipse (horizontal oval) */
     border-radius: 50% / 35%;
-    /* 19. Animation - rotate + subtle horizontal stretch */
     animation: rotate 20s linear infinite;
     transform-origin: center center;
-    z-index: 1; /* place behind the image but above page background */
-    pointer-events: none; /* decorative only */
+    z-index: 1;
+    pointer-events: none;
 }
 
 .section-label {
@@ -473,19 +401,15 @@ body {
 .stat-card {
     background: rgba(255, 215, 0, 0.1);
     padding: 2rem;
-    /* 15. Rounded corners */
     border-radius: 15px;
     text-align: center;
     border: 2px solid rgba(255, 215, 0, 0.3);
-    /* 18. Transition */
     transition: all 0.3s ease;
 }
 
 .stat-card:hover {
-    /* 17. Transform */
     transform: translateY(-5px);
     border-color: #FFD700;
-    /* 3. Box shadow */
     box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
 }
 
@@ -501,9 +425,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* ============================================
-   SKILLS SECTION
-   ============================================ */
+/* SKILLS SECTION */
 .skills-section {
     padding: 6rem 0;
     background: rgba(255, 255, 255, 0.02);
@@ -534,7 +456,7 @@ body {
     padding-left: 25px;
 }
 
-/* 6. Pseudo-element ::before with generated content */
+/* Pseudo-element ::before with generated content */
 .skill-category li::before {
     content: '✓';
     position: absolute;
@@ -543,12 +465,12 @@ body {
     font-weight: bold;
 }
 
-/* 9. Structural selector :first-child */
+/* Structural selector :first-child */
 .skill-category li:first-child {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Software Icons */
+/* SOFTWARE TOOLS SECTION */
 .software-icons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -557,15 +479,12 @@ body {
 
 .software-item {
     padding: 1rem 1rem;
-    /* 15. Rounded corners */
     border-radius: 15px;
     text-align: center;
-    /* 18. Transition */
     transition: all 0.3s ease;
 }
 
 .software-item:hover {
-    /* 17. Transform */
     transform: translateY(-5px) scale(1.05);
 }
 
@@ -582,9 +501,7 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* ============================================
-   EXPERIENCE SECTION
-   ============================================ */
+/* EXPERIENCE SECTION */
 .experience-section {
     padding: 6rem 0;
 }
@@ -602,7 +519,6 @@ body {
     position: relative;
 }
 
-/* 6. Pseudo-element ::after with generated content */
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -613,7 +529,6 @@ body {
     background: rgba(255, 215, 0, 0.3);
 }
 
-/* 9. Structural selector :last-child */
 .timeline-item:last-child::after {
     display: none;
 }
@@ -627,7 +542,6 @@ body {
 .timeline-content {
     background: rgba(255, 255, 255, 0.05);
     padding: 2rem;
-    /* 15. Rounded corners */
     border-radius: 15px;
     border-left: 4px solid #FFD700;
 }
@@ -644,9 +558,10 @@ body {
     line-height: 1.8;
 }
 
-/* ============================================
-   PROJECTS SECTION
-   ============================================ */
+
+/* PROJECTS SECTION */
+
+
 .projects-section {
     padding: 6rem 0;
 }
@@ -664,19 +579,15 @@ body {
 
 .project-card {
     background: rgba(255, 255, 255, 0.05);
-    /* 15. Rounded corners */
     border-radius: 20px;
     overflow: hidden;
-    /* 18. Transition */
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
 
 .project-card:hover {
-    /* 17. Transform */
     transform: translateY(-10px);
     border-color: #FFD700;
-    /* 3. Box shadow */
     box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
 }
 
@@ -690,12 +601,10 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* 18. Transition */
     transition: all 0.3s ease;
 }
 
 .project-card:hover .project-image img {
-    /* 17. Transform */
     transform: scale(1.1);
 }
 
@@ -705,13 +614,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* 16. Gradient overlay */
     background: linear-gradient(to bottom, rgba(10, 13, 31, 0), rgba(10, 13, 31, 0.9));
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    /* 18. Transition */
     transition: all 0.3s ease;
 }
 
@@ -738,9 +645,8 @@ body {
     font-style: italic;
 }
 
-/* ============================================
-   VIDEO SHOWREEL SECTION
-   ============================================ */
+/* VIDEO SHOWREEL SECTION */
+
 .showreel-section {
     padding: 6rem 0;
     background: rgba(255, 255, 255, 0.02);
@@ -756,10 +662,8 @@ body {
 .video-container {
     max-width: 900px;
     margin: 0 auto;
-    /* 15. Rounded corners */
     border-radius: 20px;
     overflow: hidden;
-    /* 3. Box shadow */
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     border: 3px solid #FFD700;
 }
@@ -770,9 +674,8 @@ body {
     display: block;
 }
 
-/* ============================================
-   SERVICES SECTION
-   ============================================ */
+/* SERVICES SECTION */
+
 .services-section {
     padding: 6rem 0;
 }
@@ -786,18 +689,14 @@ body {
 .service-card {
     background: rgba(255, 255, 255, 0.05);
     padding: 3rem;
-    /* 15. Rounded corners */
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.1);
-    /* 18. Transition */
     transition: all 0.3s ease;
 }
 
 .service-card:hover {
     border-color: #FFD700;
-    /* 17. Transform */
     transform: translateY(-5px);
-    /* 3. Box shadow */
     box-shadow: 0 15px 40px rgba(255, 215, 0, 0.2);
 }
 
@@ -814,9 +713,10 @@ body {
     line-height: 1.8;
 }
 
-/* ============================================
-   CONTACT SECTION
-   ============================================ */
+
+/* CONTACT SECTION */
+
+
 .contact-section {
     padding: 6rem 0;
 }
@@ -849,15 +749,12 @@ body {
     margin-bottom: 2rem;
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.05);
-    /* 15. Rounded corners */
     border-radius: 15px;
-    /* 18. Transition */
     transition: all 0.3s ease;
 }
 
 .contact-item:hover {
     background: rgba(255, 215, 0, 0.1);
-    /* 17. Transform */
     transform: translateX(10px);
 }
  
@@ -868,11 +765,9 @@ body {
     font-size: 1.2rem;
 }
 
-/* 5. Attribute selector [href] */
 .contact-text a[href] {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    /* 18. Transition */
     transition: all 0.3s ease;
 }
 
@@ -896,29 +791,24 @@ body {
 .social-link {
     padding: 0.8rem 1.5rem;
     background: rgba(255, 215, 0, 0.1);
-    /* 15. Rounded corners */
     border-radius: 25px;
     color: #FFD700;
     text-decoration: none;
     border: 2px solid rgba(255, 215, 0, 0.3);
-    /* 18. Transition */
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
     background: #FFD700;
     color: #0a0d1f;
-    /* 17. Transform */
     transform: translateY(-3px);
 }
 
-/* ============================================
-   CONTACT FORM
-   ============================================ */
+/* CONTACT FORM */
+
 .contact-form-container {
     background: rgba(255, 255, 255, 0.05);
     padding: 3rem;
-    /* 15. Rounded corners */
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
@@ -942,7 +832,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* 5. Attribute selector for input types */
+/* Attribute selector for input types */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="tel"],
@@ -952,26 +842,22 @@ body {
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid rgba(255, 255, 255, 0.2);
-    /* 15. Rounded corners */
     border-radius: 10px;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    /* 18. Transition */
     transition: all 0.3s ease;
 }
 
-/* 7. User action pseudo-class :focus */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #FFD700;
-    /* 3. Box shadow */
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
 }
 
-/* 12. Validity pseudo-class :invalid */
+/* Validity pseudo-class :invalid */
 .form-group input:invalid:not(:focus):not(:placeholder-shown) {
     border-color: #ff4444;
 }
@@ -999,19 +885,16 @@ body {
     margin-top: 1rem;
 }
 
-/* 10. Negation pseudo-class :not() */
+/* Negation pseudo-class :not() */
 button:not(:disabled):hover {
-    /* 17. Transform */
     transform: translateY(-3px);
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/* FOOTER */
+
 .main-footer {
     background: rgba(255, 255, 255, 0.02);
     padding: 2rem 0;
-    /* 14. Border */
     border-top: 2px solid rgba(255, 215, 0, 0.3);
     text-align: center;
     margin-top: 4rem;
@@ -1022,38 +905,30 @@ button:not(:disabled):hover {
     font-size: 0.9rem;
 }
 
-/* ============================================
-   20. SPECIFICITY DEMONSTRATION
-   ============================================ */
-/* Element selector (0,0,1) - Low specificity */
+/* SPECIFICITY DEMONSTRATION */
+
 a {
     color: #ffffff;
 }
 
-/* Class selector (0,1,0) - Medium specificity */
 .main-nav a {
     color: #ffffff;
 }
 
-/* Class + pseudo-class (0,2,0) - Higher specificity */
 .main-nav a:hover {
     color: #FFD700;
 }
 
-/* Multiple classes (0,2,1) - Highest specificity */
 .main-nav a.active {
     color: #FFD700;
 }
 
-/* ============================================
-   8. CHILD COMBINATOR >
-   ============================================ */
 /* Direct child selector */
 .skills-grid > .skill-category {
     position: relative;
 }
 
-/* 13. RELATIONAL SELECTORS */
+/* RELATIONAL SELECTORS */
 /* Adjacent sibling + */
 .form-group label + input {
     margin-top: 0.25rem;
@@ -1064,9 +939,6 @@ a {
     display: inline-block;
 }
 
-/* ============================================
-   11. NTH PSEUDO-CLASS
-   ============================================ */
 /* Style every 2nd project card differently */
 .project-card:nth-child(2n) {
     background: rgba(255, 215, 0, 0.05);
@@ -1077,9 +949,7 @@ a {
     border-color: rgba(255, 215, 0, 0.3);
 }
 
-/* ============================================
-   RESPONSIVE DESIGN - MEDIA QUERIES
-   ============================================ */
+/* RESPONSIVE DESIGN - MEDIA QUERIES */
 @media screen and (max-width: 1024px) {
     .hero-container,
     .about-grid,
@@ -1207,46 +1077,3 @@ a {
         padding: 2rem;
     }
 }
-
-/* ============================================
-   PRINT STYLES (Bonus)
-   ============================================ */
-@media print {
-    .main-header,
-    .main-footer,
-    .social-icons,
-    .cta-btn {
-        display: none;
-    }
-    
-    body {
-        background: white;
-        color: black;
-    }
-}
-
-/* ============================================
-   END OF STYLESHEET
-   All 21 CSS Requirements Fulfilled:
-   1. Google Fonts (Bebas Neue, Poppins) ✓
-   2. Semi-transparent colors ✓
-   3. Shadows (box-shadow, text-shadow) ✓
-   4. Text effects (letter-spacing) ✓
-   5. Attribute selectors ([alt], [href], [type]) ✓
-   6. Pseudo-elements (::before, ::after) ✓
-   7. User action pseudo-classes (:hover, :focus, :active) ✓
-   8. Child combinator (>) ✓
-   9. Structural selectors (:first-child, :last-child) ✓
-   10. Negation pseudo-class (:not()) ✓
-   11. Nth pseudo-class (:nth-child()) ✓
-   12. Validity pseudo-classes (:valid, :invalid) ✓
-   13. Relational selectors (+, ~) ✓
-   14. Borders ✓
-   15. Rounded corners ✓
-   16. Gradients ✓
-   17. Transforms ✓
-   18. Transitions ✓
-   19. Animations (@keyframes) ✓
-   20. Specificity demonstration ✓
-   21. Comments and indentation ✓
-   ============================================ */
